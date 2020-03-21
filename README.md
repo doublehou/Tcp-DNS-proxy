@@ -18,8 +18,14 @@ How to use this python script ?
 3.    run the script
 
   ```bash
-  $ sudo python tcpdns.py -f tcpdns.json
+  $ sudo python tcpdns.py -f tcpdns.json.example
   ```
+4.   stop the daemon process
+
+  ```bash
+  $ sudo python tcpdns.py -s
+  ```
+
   
 Commandline
 ----------------------------
@@ -33,6 +39,7 @@ optional arguments:
   -h, --help      show this help message and exit
   -f CONFIG_JSON  Json config file
   -d              Print debug message
+  -s              Stop tcp dns proxy daemon
 ```
 
   
@@ -55,7 +62,7 @@ Configuration file
     "enable_server_switch": true,
     "speed_test": true,
     "enable_lru_cache": true,
-    "lru_cache_size"  : 100,
+    "lru_cache_size"  : 500,
     "udp_mode"        : false,
     "daemon_process"  : false,
     "internal_dns_server": ["192.168.1.1:53"],
